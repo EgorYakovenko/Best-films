@@ -28,8 +28,16 @@ export const getFilmsById = async movieId => {
 export const getCast = async movieId => {
   const url = `movie/${movieId}/credits?language=en-US`;
   const response = await axios.get(url, options);
-  console.log(response);
+  // console.log(response);
   return response.data.cast;
+};
+// 'https://api.themoviedb.org/3/movie/218/reviews?language=en-US&page=1';
+
+export const getReviews = async movieId => {
+  const url = `movie/${movieId}/reviews?language=en-US&page=1`;
+  const response = await axios.get(url, options);
+  console.log(response);
+  return response.data.results;
 };
 
 // 'https://api.themoviedb.org/3/movie/movie_id/credits?language=en-US';

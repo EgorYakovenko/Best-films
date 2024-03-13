@@ -1,26 +1,37 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCast } from '../movieSearch-api';
+import Loader from './Loader';
+import ErrorMessage from './ErrorMessage';
 
 function MovieCast() {
   const { movieId } = useParams();
-  console.log(movieId);
+  // console.log(movieId);
   const [casts, setCasts] = useState([]);
-  console.log(casts);
+  // console.log(casts);
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     async function getData() {
       try {
+        setIsLoading(true);
         const data = await getCast(movieId);
-
         setCasts(data);
-      } catch (error) {}
+      } catch (error) {
+        setError(true);
+      } finally {
+        setIsLoading(false);
+      }
     }
     getData();
   }, [movieId]);
 
   return (
     <ul>
+      {isLoading && <Loader />}
+      {error && <ErrorMessage />}
       {casts.map(cast => (
         <li key={cast.id}>
           <img

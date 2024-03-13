@@ -18,7 +18,8 @@ function HomePage() {
 
   return (
     <div>
-      <h1>Welcome</h1>
+      <h1>КиноКодер</h1>
+      <h2>Программисты Ищут Фильмы, А Фильмы Ищут Ответы В Их Коде</h2>
       <MovieList results={films} />
     </div>
   );
