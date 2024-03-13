@@ -1,18 +1,27 @@
-import { useEffect, useState } from 'react';
-import { NavLink, Outlet, useParams } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import {
+  Link,
+  NavLink,
+  Outlet,
+  useParams,
+  useLocation,
+} from 'react-router-dom';
 import { getFilmsById } from '../movieSearch-api';
 
 function MovieDetailsPage() {
   const { movieId } = useParams();
   const [filmId, setFilmId] = useState({});
+
+  const location = useLocation();
+  // console.log(location);
+  const goBackLink = useRef(location.state?.from ?? '/');
   // console.log(movieId);
-  console.log(movieId);
+  // console.log(movieId);
 
   useEffect(() => {
     async function getData() {
       try {
         const data = await getFilmsById(movieId);
-        console.log(data);
         setFilmId(data);
       } catch (error) {}
     }
@@ -22,6 +31,7 @@ function MovieDetailsPage() {
   return (
     <div>
       <ul>
+        <Link to={goBackLink.current}>Go back</Link>
         <li>
           <img
             src={`https://image.tmdb.org/t/p/w300${filmId.poster_path}`}

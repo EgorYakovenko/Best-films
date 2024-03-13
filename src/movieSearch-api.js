@@ -24,3 +24,23 @@ export const getFilmsById = async movieId => {
   // console.log(response);
   return response.data;
 };
+
+export const getCast = async movieId => {
+  const url = `movie/${movieId}/credits?language=en-US`;
+  const response = await axios.get(url, options);
+  console.log(response);
+  return response.data.cast;
+};
+
+// 'https://api.themoviedb.org/3/movie/movie_id/credits?language=en-US';
+
+// `search/movie?query =${name}`
+// 'https://api.themoviedb.org/3/search/movie?query=dune&include_adult=false&language=en-US&page=1'
+export const searchMovieByName = async movieFilter => {
+  const response = await axios.get(
+    `https://api.themoviedb.org/3/search/movie?query=${movieFilter}&include_adult=false&language=en-US&page=1`,
+    options
+  );
+  // console.log(response);
+  return response.data.results;
+};

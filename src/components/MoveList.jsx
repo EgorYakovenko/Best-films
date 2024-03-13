@@ -1,15 +1,16 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function MovieList({ results }) {
   // console.log(results);
+  const location = useLocation();
 
   return (
     <ul>
       {results.map(result => (
         <li key={result.id}>
-          {/* <p>{result.overview}</p> */}
-          <Link to={`/movies/${result.id}`}>{result.title}</Link>
-          {/* <p>{result.backdrop_path}</p> */}
+          <Link to={`/movies/${result.id}`} state={{ from: location }}>
+            {result.title}
+          </Link>
         </li>
       ))}
     </ul>
@@ -17,9 +18,3 @@ function MovieList({ results }) {
 }
 
 export default MovieList;
-
-{
-  /* <img src={results.poster_path} alt="" />; */
-}
-
-//
