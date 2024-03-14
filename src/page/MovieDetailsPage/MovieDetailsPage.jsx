@@ -6,7 +6,7 @@ import {
   useParams,
   useLocation,
 } from 'react-router-dom';
-import { getFilmsById } from '../movieSearch-api';
+import { getFilmsById } from '../../movieSearch-api';
 
 function MovieDetailsPage() {
   const { movieId } = useParams();

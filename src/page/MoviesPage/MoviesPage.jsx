@@ -1,9 +1,9 @@
 import { useEffect, useState, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 // import MovieList from '../components/MovieList';
-import MovieList from '../components/MoveList';
-import SearchFilms from '../components/SearchFilms';
-import { searchMovieByName } from '../movieSearch-api/';
+import MovieList from '../../components/MoveList/MoveList';
+import SearchFilms from '../../components/SearchFilms/SearchFilms';
+import { searchMovieByName } from '../../movieSearch-api';
 
 function MoviesPage() {
   const [movies, setMovies] = useState([]);

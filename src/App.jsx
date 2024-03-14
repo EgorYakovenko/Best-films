@@ -1,14 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import HomePage from './page/HomePage';
-import Navigation from './components/Navigation';
-import MoviesPage from './page/MoviesPage';
-import MovieDetailsPage from './page/MovieDetailsPage';
-import MovieCast from './components/MovieCast';
-import MoviesReviews from './components/MovieReviews';
-import NotFoundPage from './page/NotFoundPage';
-// import reactLogo from './assets/react.svg';
-// import viteLogo from '/vite.svg';
-// import './App.css';
+import HomePage from './page/HomePage/HomePage';
+import Navigation from './components/Navigation/Navigation';
+import MoviesPage from './page/MoviesPage/MoviesPage';
+import MovieDetailsPage from './page/MovieDetailsPage/MovieDetailsPage';
+import MovieCast from './components/MovieCast/MovieCast';
+import MoviesReviews from './components/MovieReviews/MovieReviews';
+import NotFoundPage from './page/NotFoundPage/NotFoundPage';
 
 function App() {
   return (

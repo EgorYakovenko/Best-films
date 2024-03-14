@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getCast } from '../movieSearch-api';
-import Loader from './Loader';
-import ErrorMessage from './ErrorMessage';
+import { getCast } from '../../movieSearch-api';
+import Loader from '../loader/Loader';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 function MovieCast() {
   const { movieId } = useParams();

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getReviews } from '../movieSearch-api';
+import { getReviews } from '../../movieSearch-api';
 import { FcVoicePresentation } from 'react-icons/fc';
-import wink from './defaultImg/wink.png';
+import wink from '../defaultImg/wink.png';
 
 function MoviesReviews() {
   const { movieId } = useParams();
