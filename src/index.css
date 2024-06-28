@@ -4,6 +4,7 @@ li {
 
 body {
   font-family: 'Roboto', sans-serif;
+  background: linear-gradient(90deg, #0b0d0f, #1a1d21, #292e36);
 }
 
 h1,
@@ -24,4 +25,9 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none; /* Убирает подчеркивание */
+  color: inherit;
 }

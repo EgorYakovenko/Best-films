@@ -1,0 +1,23 @@
+.container {
+  /* border: 1px solid red; */
+  background-color: rgba(134, 134, 134, 15%);
+  padding: 15px;
+  border-radius: 7px;
+  /* display: flex; */
+}
+
+.nameFilm {
+  color: rgb(179, 179, 179);
+  border: 1px solid rgb(153, 153, 153);
+  padding: 3px;
+}
+
+.nameFilm:hover,
+.nameFilm :focus {
+  border: 1px solid rgb(146, 245, 126);
+  padding: 3px;
+}
+
+.nameList {
+  margin-bottom: 10px;
+}
