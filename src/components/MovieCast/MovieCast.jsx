@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getCast } from '../../movieSearch-api';
 import Loader from '../loader/Loader';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import css from './MovieCast.module.css';
 
 function MovieCast() {
   const { movieId } = useParams();
@@ -38,7 +39,7 @@ function MovieCast() {
             src={`https://image.tmdb.org/t/p/w154${cast.profile_path}`}
             alt=""
           />
-          <p>Name:{cast.name}</p>
+          <p className={css.text}>Name:{cast.name}</p>
           <p>Character:{cast.character}</p>
           <p>Popularity: {cast.popularity}</p>
         </li>

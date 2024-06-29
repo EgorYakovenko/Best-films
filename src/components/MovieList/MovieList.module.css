@@ -3,21 +3,43 @@
   background-color: rgba(134, 134, 134, 15%);
   padding: 15px;
   border-radius: 7px;
-  /* display: flex; */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .nameFilm {
   color: rgb(179, 179, 179);
-  border: 1px solid rgb(153, 153, 153);
+  /* border: 1px solid rgb(153, 153, 153); */
   padding: 3px;
+  text-align: center;
 }
 
 .nameFilm:hover,
 .nameFilm :focus {
-  border: 1px solid rgb(146, 245, 126);
+  /* border: 1px solid rgb(146, 245, 126); */
+  color: rgb(146, 245, 126);
   padding: 3px;
 }
 
 .nameList {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  width: 154px;
+  height: 231px;
+  padding: 15px;
+  /* margin: 20px; */
+}
+
+.image {
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+.link {
+  display: block;
+  width: 154px;
+  height: 231px;
+}
+
+.test :hover,
+.test :focus {
+  box-shadow: 10px 10px 15px rgba(231, 231, 231, 0.3);
 }

@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import css from './SearchFilms.module.css';
 
 function SearchFilms() {
   const [params, setParams] = useSearchParams();
@@ -21,6 +21,8 @@ function SearchFilms() {
     <div>
       <form onSubmit={handleSubmit}>
         <input
+          className={css.search}
+          placeholder="Поиск"
           type="text"
           name="query"
           onChange={e => changeSearchFilter(e.target.value)}
